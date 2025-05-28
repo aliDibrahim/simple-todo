@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #156377, #4e085f);
+  padding: 10px;
+}
+.app {
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.app img {
+  width: 30px;
+  margin-left: 10px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-left: 20px;
+  background-color: #edeef0;
+  border-radius: 30px;
+}
+.row input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 20px;
+  flex: 1;
+  max-width: 70%;
+}
+.row input::placeholder {
+  transition: 0.3s;
+}
+.row input:focus::placeholder {
+  opacity: 0;
+}
+.row button {
+  border: none;
+  outline: none;
+  background-color: #ff5945;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.row button:hover {
+  background-color: red;
+}
+.app p {
+  color: #195c75;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.app p.empty {
+  font-size: 20px;
+  color: gray;
+}
+.list-container li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 40px 12px 50px;
+  user-select: none;
+  line-break: anywhere;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.list-container li span.icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  top: 50%;
+  transform: translate(0px, -50%);
+  left: 10px;
+}
+.list-container li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+.list-container li.checked span.icon {
+  background-image: url(images/checked.png);
+}
+.list-container li span.delete {
+  position: absolute;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 50%;
+  text-decoration: none !important;
+  transition: 0.3s;
+}
+.list-container li span.delete:hover {
+  color: red;
+  background-color: #c3b6b6;
+}
