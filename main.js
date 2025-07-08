@@ -33,18 +33,21 @@ listConatiner.addEventListener("click", (e) => {
   ) {
     e.target.parentElement.remove();
     storeTasks();
-    if (localStorage.getItem("tasks") === "") {
+    if (localStorage.getItem("simple-todo-tasks") === "") {
       empty();
     }
   }
 });
 // store the tasks in the local storage and show them
 function storeTasks() {
-  localStorage.setItem("tasks", listConatiner.innerHTML);
+  localStorage.setItem("simple-todo-tasks", listConatiner.innerHTML);
 }
 function showTasks() {
-  listConatiner.innerHTML = localStorage.getItem("tasks");
-  if (localStorage.getItem("tasks") === "") {
+  listConatiner.innerHTML = localStorage.getItem("simple-todo-tasks");
+  if (
+    localStorage.getItem("simple-todo-tasks") === "" ||
+    !localStorage.getItem("simple-todo-tasks")
+  ) {
     empty();
   } else {
     notEmpty();
